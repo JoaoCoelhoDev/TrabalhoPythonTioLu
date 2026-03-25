@@ -1,0 +1,39 @@
+# Joao Vitor Coelho de Souza
+# TesteCliente.rest
+
+### Verbo GET - listar todos
+GET http://localhost:8000/cliente/ HTTP/1.1
+
+###
+
+### Verbo GET - listar um
+GET http://localhost:8000/cliente/1 HTTP/1.1
+
+###
+
+### Verbo POST - adicionar
+POST http://127.0.0.1:8000/cliente/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Joao Vitor Coelho de Souza",
+    "cpf": "98765432100",
+    "telefone": "49977776666"
+}
+
+###
+
+### Verbo PUT - atualizar
+PUT http://127.0.0.1:8000/cliente/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Joao Vitor Coelho de Souza",
+    "cpf": "98765432100",
+    "telefone": "49955554444"
+}
+
+###
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/cliente/1 HTTP/1.1

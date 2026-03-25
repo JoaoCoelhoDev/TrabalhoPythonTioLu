@@ -1,0 +1,45 @@
+# Joao Vitor Coelho de Souza
+# TesteFuncionario.rest
+
+### Verbo GET - listar todos
+GET http://localhost:8000/funcionario/ HTTP/1.1
+
+###
+
+### Verbo GET - listar um
+GET http://localhost:8000/funcionario/1 HTTP/1.1
+
+###
+
+### Verbo POST - adicionar
+POST http://127.0.0.1:8000/funcionario/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Joao Vitor Coelho de Souza",
+    "matricula": "MAT001",
+    "cpf": "12345678901",
+    "telefone": "49988887777",
+    "grupo": 1,
+    "senha": "senha123"
+}
+
+###
+
+### Verbo PUT - atualizar
+PUT http://127.0.0.1:8000/funcionario/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Joao Vitor Coelho de Souza",
+    "matricula": "MAT001",
+    "cpf": "12345678901",
+    "telefone": "49988887777",
+    "grupo": 2,
+    "senha": "novaSenha456"
+}
+
+###
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/funcionario/1 HTTP/1.1
