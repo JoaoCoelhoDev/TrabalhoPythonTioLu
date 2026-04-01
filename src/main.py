@@ -7,10 +7,11 @@ from infra.database import engine, Base
 from routers import FuncionarioRouter
 from routers import ClienteRouter
 from routers import ProdutoRouter
+from routers import AuthRouter
 
-app = FastAPI()
+app = FastAPI(title="API Pastelaria do Zé")
 
-# Cria as tabelas no banco ao iniciar a API
+# Cria as tabelas no banco ao iniciar
 @app.on_event("startup")
 async def startup():
     async with engine.begin() as conn:
@@ -20,12 +21,13 @@ async def startup():
 @app.get("/", tags=["Root"], status_code=200)
 async def root():
     return {
-        "detail": "API Pastelaria do Zé",
+        "detail":     "API Pastelaria do Zé",
         "Swagger UI": "http://127.0.0.1:8000/docs",
-        "ReDoc": "http://127.0.0.1:8000/redoc"
+        "ReDoc":      "http://127.0.0.1:8000/redoc"
     }
 
-# Mapeamento das rotas/endpoints
+# Mapeamento das rotas
+app.include_router(AuthRouter.router)
 app.include_router(FuncionarioRouter.router)
 app.include_router(ClienteRouter.router)
 app.include_router(ProdutoRouter.router)
