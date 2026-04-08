@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip freeze:*)",
+      "Bash(python -m pip freeze)"
+    ]
+  }
+}

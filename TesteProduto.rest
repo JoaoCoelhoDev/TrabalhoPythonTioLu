@@ -1,0 +1,39 @@
+# João Vitor Coelho de Souza
+# TesteProduto.rest
+
+### Verbo GET - listar todos
+GET http://localhost:8000/produto/ HTTP/1.1
+
+###
+
+### Verbo GET - listar um
+GET http://localhost:8000/produto/1 HTTP/1.1
+
+###
+
+### Verbo POST - adicionar
+POST http://127.0.0.1:8000/produto/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Pastel de Frango",
+    "descricao": "Pastel frito recheado com frango desfiado",
+    "valor_unitario": 12.50
+}
+
+###
+
+### Verbo PUT - atualizar
+PUT http://127.0.0.1:8000/produto/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Pastel de Frango Especial",
+    "descricao": "Pastel frito recheado com frango desfiado e catupiry",
+    "valor_unitario": 15.00
+}
+
+###
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/produto/1 HTTP/1.1

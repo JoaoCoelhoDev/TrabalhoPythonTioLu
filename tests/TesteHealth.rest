@@ -1,0 +1,35 @@
+# Joao Vitor Coelho de Souza
+# TesteHealth.rest
+
+### Health check básico
+GET http://localhost:8000/health
+
+###
+
+### Health check do banco
+GET http://localhost:8000/health/database
+
+###
+
+### Health check das tabelas
+GET http://localhost:8000/health/database/tables
+
+###
+
+### Health check do sistema
+GET http://localhost:8000/health/system
+
+###
+
+### Health check completo
+GET http://localhost:8000/health/full
+
+###
+
+### Readiness probe
+GET http://localhost:8000/ready
+
+###
+
+### Liveness probe
+GET http://localhost:8000/live

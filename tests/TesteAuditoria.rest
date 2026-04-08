@@ -1,0 +1,57 @@
+# Joao Vitor Coelho de Souza
+# TesteAuditoria.rest
+
+### Cole seu token aqui após fazer login
+@access_token = COLE_SEU_TOKEN_AQUI
+
+### Listar ações disponíveis
+GET http://localhost:8000/auditoria/acoes
+Authorization: Bearer {{access_token}}
+
+###
+
+### Auditoria geral - todos os registros
+GET http://localhost:8000/auditoria
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por CREATE (cadastros)
+GET http://localhost:8000/auditoria?acao=CREATE
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por UPDATE (edições)
+GET http://localhost:8000/auditoria?acao=UPDATE
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por DELETE (exclusões)
+GET http://localhost:8000/auditoria?acao=DELETE
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por LOGIN
+GET http://localhost:8000/auditoria?acao=LOGIN
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por recurso FUNCIONARIO
+GET http://localhost:8000/auditoria?recurso=FUNCIONARIO
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por recurso CLIENTE
+GET http://localhost:8000/auditoria?recurso=CLIENTE
+Authorization: Bearer {{access_token}}
+
+###
+
+### Filtrar por recurso PRODUTO
+GET http://localhost:8000/auditoria?recurso=PRODUTO
+Authorization: Bearer {{access_token}}
