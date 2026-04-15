@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(pip freeze:*)",
-      "Bash(python -m pip freeze)"
+      "Bash(python -m pip freeze)",
+      "Bash(python -c \"f=open\\('c:/Users/joaov/Desktop/TrabalhoPython/src/infra/orm/__init__.py'\\); print\\(repr\\(f.read\\(\\)\\)\\)\")"
     ]
   }
 }
